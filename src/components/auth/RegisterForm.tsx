@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { 
@@ -14,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useAuth, UserRole } from "@/contexts/AuthContext";
-import { toast } from "@/components/ui/sonner";
+import { toast } from "@/lib/toast";
 
 const RegisterForm = () => {
   const navigate = useNavigate();

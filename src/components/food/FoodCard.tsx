@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Clock, MapPin, AlertCircle, ShoppingBag, Tag, Calendar } from "lucide-react";
-import { toast } from "@/components/ui/sonner";
+import { toast } from "@/lib/toast";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import {

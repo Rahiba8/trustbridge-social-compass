@@ -1,13 +1,11 @@
-
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import DashboardCard from "@/components/dashboard/DashboardCard";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, Legend } from "recharts";
-import { Heart, Banknote, Utensils, UsersRound, BadgeCheck, BuildingCommunity, Download, Clock, ArrowRight, Search } from "lucide-react";
+import { Heart, Banknote, Utensils, UsersRound, BadgeCheck, Building, Download, Clock, ArrowRight, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// Mock data for distribution chart
 const distributionData = [
   { name: "Healthcare", value: 35 },
   { name: "Funds", value: 40 },
@@ -16,7 +14,6 @@ const distributionData = [
 
 const COLORS = ["hsl(var(--primary))", "hsl(var(--trustbridge-green))", "hsl(var(--trustbridge-yellow))"];
 
-// Mock data for the bar chart
 const moduleData = [
   { name: "Jan", healthcare: 65, funds: 78, food: 42 },
   { name: "Feb", healthcare: 75, funds: 85, food: 58 },
@@ -33,7 +30,6 @@ const GovernmentDashboard = () => {
     pendingApprovals: 0
   });
   
-  // Simulate data fetching
   useEffect(() => {
     const fetchData = async () => {
       await new Promise(resolve => setTimeout(resolve, 1000));
@@ -261,7 +257,7 @@ const GovernmentDashboard = () => {
                         ) : item.type === "food" ? (
                           <Utensils className="h-4 w-4" />
                         ) : (
-                          <BuildingCommunity className="h-4 w-4" />
+                          <Building className="h-4 w-4" />
                         )}
                       </div>
                       <div>
